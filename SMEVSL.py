@@ -4,7 +4,8 @@
 import re
 from bs4 import BeautifulSoup
 import requests
-
+import json
+import os
 
 def search():
     search_term = input('what would you like to search  for? ') # input from user

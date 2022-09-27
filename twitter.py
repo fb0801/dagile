@@ -28,7 +28,8 @@ countdown(int(t))
 
 
 def twitter():
-	pass
+	url ="https://twitter.com/home?lang=en"
+	
 
 
 def files():
