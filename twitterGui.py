@@ -15,6 +15,10 @@ class TwitterBot(Frame):
         self.grid() # to say we are using grids
         self.screen() # to call the screen method
 
+def helpbtn(self):
+    self.messagebox.showinfo("Help", "Enter your login details to access the To Do List") # if the user clicks on help this messagebox will appear 
+
+
 
 def speak(self):
     self.Entrybox = Entry(textvariable = name_input)
@@ -22,9 +26,6 @@ def speak(self):
     button_quit.pack()
     help_btn = Button( text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.helpbtn)
     help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
-
-def helpbtn(self):
-    messagebox.showinfo("Help", "Enter your login details to access the To Do List") # if the user clicks on help this messagebox will appear 
 
 
 root = Tk()
