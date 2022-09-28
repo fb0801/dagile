@@ -10,4 +10,9 @@
 <li>https://stackoverflow.com/questions/21285380/find-column-whose-name-contains-a-specific-string</li>
 <li>https://pandas.pydata.org/docs/user_guide/index.html#user-guide</li>
 <li>https://www.w3schools.com/python/matplotlib_getting_started.asp</li>
+<li>https://stackoverflow.com/questions/33313858/importerror-no-module-named-email-mime-email-is-not-a-package</li>
 </ul>
+
+
+<h3>Changes made:</h3>
+<li>changed email file to stop script conflict</li>
