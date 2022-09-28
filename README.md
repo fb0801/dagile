@@ -15,4 +15,6 @@
 
 
 <h3>Changes made:</h3>
-<li>changed email file to stop script conflict</li>
+<ul>
+<li>Renamed email file to stop script conflict</li>
+</ul>
