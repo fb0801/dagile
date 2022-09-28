@@ -1,7 +1,7 @@
 '''Python script to read two files and see if they are there otherwise add them'''
 
 def read_file_one():
-   with open("", 'r') as f:
+   with open("STUDENTS_spreadsheet.xlsx", 'r') as f:
         for line in f:
             if "" in line:
             # found = True # Not necessary
@@ -18,3 +18,8 @@ def read_file_two():
 def write_file():
     with open("", 'w+') as h:
         pass 
+
+
+if __name__ == "__main__":
+    #takes user to the main menu using magic method/dunders
+    read_file_one()

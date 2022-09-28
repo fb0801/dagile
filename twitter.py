@@ -20,11 +20,12 @@ def countdown(t):
 	print('Fire in the hole!!')
 
 
-# input time in seconds
-t = input("Enter the time in seconds: ")
+def start():
+	# input time in seconds
+	t = input("Enter the time in seconds: ")
 
-# function call
-countdown(int(t))
+	# function call
+	countdown(int(t))
 
 
 def twitter():
@@ -34,3 +35,7 @@ def twitter():
 
 def files():
 	pass
+
+if __name__ == "__main__":
+    #takes user to the main menu using magic method/dunders
+    start()
