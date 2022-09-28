@@ -9,26 +9,27 @@ import json
 import os
 
 
-root = Tk()
-root.title('Twitter Bot')
+class TwitterBot(Frame):
+    def __init__(self, master):
+        Frame.__init__(self, master) # a frame to contain everything in
+        self.grid() # to say we are using grids
+        self.screen() # to call the screen method
 
 
+def speak(self):
+    self.Entrybox = Entry(textvariable = name_input)
+    button_quit =Button(root, text="Exit program", command=root.quit)
+    button_quit.pack()
+    help_btn = Button( text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.helpbtn)
+    help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
-
-Entrybox = Entry(textvariable = name_input)
-button_quit =Button(root, text="Exit program", command=root.quit)
-button_quit.pack()
-help_btn = Button( text = '?',font = 'Times 20 ',width = 1, height = 1, command = helpbtn)
-help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
-
-def helpbtn():
+def helpbtn(self):
     messagebox.showinfo("Help", "Enter your login details to access the To Do List") # if the user clicks on help this messagebox will appear 
 
 
+root = Tk()
+name_input = StringVar()
 
 
-
+root.title('Twitter Bot')
 root.mainloop()
-
-
-
