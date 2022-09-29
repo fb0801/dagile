@@ -15,8 +15,8 @@ options ={}
 
 class TwitterBot:
     def __init__(self, master):
-        self.master = master
-        self.Frame =tk.Frame(self.master) # a frame to contain everything in
+        self = master
+        tk.Frame(self.master) # a frame to contain everything in
         
         master.title('Twitter Bot')
         
