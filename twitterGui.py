@@ -3,6 +3,7 @@
 #modules to use
 #from tkinter import messagebox
 from tkinter import *
+from tkinter import messagebox
 import tkinter as tk
 import re
 from bs4 import BeautifulSoup
@@ -25,13 +26,13 @@ class TwitterBot:
         self.user_input.pack()
         self.button_quit =tk.Button(self, text="Exit program", command=master.destroy)
         self.button_quit.pack()
-        self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.bothelp)
+        self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
         self.help_btn.pack()#grid(row = 8, column = 9)#pack(side = RIGHT)
 
 
 
-    def bothelp(self):
-        self.messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
+    def bothelp():
+        messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
 
     def botSearch(self):
         pass
