@@ -1,8 +1,9 @@
 '''twitter bot gui version'''
 
 #modules to use
-from tkinter import messagebox
+#from tkinter import messagebox
 from tkinter import *
+#import tkinter as tk
 import re
 from bs4 import BeautifulSoup
 import requests
@@ -12,17 +13,17 @@ import os
 
 class TwitterBot:
     def __init__(self, master):
-        #Frame.__init__(self, root) # a frame to contain everything in
         self.master = master
+        self.Frame =Frame(self.master) # a frame to contain everything in
+        
         master.title('Twitter Bot')
-        #self.grid() # to say we are using grids
-        #speak() # to call the screen method
+        
 
         user_input = Entry(textvariable = name_input)
         user_input.pack()
-        button_quit =Button(root, text="Exit program", command=root.quit)
+        button_quit =Button(self, text="Exit program", command=self.quit)
         button_quit.pack()
-        help_btn = Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
+        help_btn = Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.bothelp)
         help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
 
@@ -36,10 +37,18 @@ class TwitterBot:
     def botSearch(self):
         pass
 
+name_input = tk.StringVar()
 
-root = Tk()
-name_input = StringVar()
-
-
+#def main():
+root = tk.Tk()
 Terry = TwitterBot(root)
 root.mainloop()
+
+
+
+
+
+#if __name__ == "__main__":
+    #takes user to the main menu using magic method/dunders
+    #main()
+
