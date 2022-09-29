@@ -3,7 +3,7 @@
 #modules to use
 #from tkinter import messagebox
 from tkinter import *
-#import tkinter as tk
+import tkinter as tk
 import re
 from bs4 import BeautifulSoup
 import requests
@@ -21,15 +21,12 @@ class TwitterBot:
 
         user_input = Entry(textvariable = name_input)
         user_input.pack()
-        button_quit =Button(self, text="Exit program", command=self.quit)
+        button_quit =Button(self, text="Exit program", command=root.destroy)
         button_quit.pack()
         help_btn = Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.bothelp)
         help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
 
-    
-        #self.help_btn = Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.helpbtn)
-        #self.help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
     def bothelp(self):
         self.messagebox.showinfo("Help", "Enter your login details to access the To Do List") # if the user clicks on help this messagebox will appear 
@@ -37,18 +34,17 @@ class TwitterBot:
     def botSearch(self):
         pass
 
-name_input = tk.StringVar()
 
-#def main():
-root = tk.Tk()
+
+
+root = Tk()
+name_input = StringVar()
+
+
 Terry = TwitterBot(root)
 root.mainloop()
-
-
-
 
 
 #if __name__ == "__main__":
     #takes user to the main menu using magic method/dunders
     #main()
-
