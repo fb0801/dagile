@@ -10,26 +10,28 @@ import requests
 import json
 import os
 
+options ={}
+
 
 class TwitterBot:
     def __init__(self, master):
         self.master = master
-        self.Frame =Frame(self.master) # a frame to contain everything in
+        self.Frame =tk.Frame(self.master) # a frame to contain everything in
         
         master.title('Twitter Bot')
         
 
-        user_input = Entry(textvariable = name_input)
-        user_input.pack()
-        button_quit =Button(self, text="Exit program", command=root.destroy)
-        button_quit.pack()
-        help_btn = Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.bothelp)
-        help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
+        self.user_input = tk.Entry(textvariable = name_input)
+        self.user_input.pack()
+        self.button_quit =tk.Button(self, text="Exit program", command=master.destroy)
+        self.button_quit.pack()
+        self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = self.bothelp)
+        self.help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
 
 
     def bothelp(self):
-        self.messagebox.showinfo("Help", "Enter your login details to access the To Do List") # if the user clicks on help this messagebox will appear 
+        self.messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
 
     def botSearch(self):
         pass
@@ -37,7 +39,7 @@ class TwitterBot:
 
 
 
-root = Tk()
+root = tk.Tk()
 name_input = StringVar()
 
 
