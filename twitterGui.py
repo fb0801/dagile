@@ -33,11 +33,11 @@ class TwitterBot:
         self.user_input = tk.Entry(textvariable = name_input)
         self.user_input.pack()
 
-        variable = StringVar(master)
+        
         variable.set(OPTIONS[0]) # default value
 
-        w = OptionMenu(master, variable, *OPTIONS)
-        w.pack()
+        self.w = OptionMenu(self, variable, *OPTIONS)
+        self.w.pack()
 
         self.button_quit =tk.Button(self, text="Exit", command=master.destroy)
         self.button_quit.pack()
@@ -56,7 +56,7 @@ class TwitterBot:
         if isinstance(dur, int) == True:
             print (dur)
             print(measure)
-            
+
             while dur:
                 mins, secs = divmod(dur, 60)
                 timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -82,7 +82,7 @@ class TwitterBot:
 
 root = tk.Tk()
 name_input = IntVar()
-
+variable = StringVar()
 
 Terry = TwitterBot(root)
 root.geometry("300x300")
