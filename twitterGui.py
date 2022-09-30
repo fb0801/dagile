@@ -1,7 +1,6 @@
 '''twitter bot gui version'''
 
 #modules to use
-#from tkinter import messagebox
 from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
@@ -10,6 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import os
+import random
 
 options ={}
 
@@ -24,12 +24,15 @@ class TwitterBot:
 
         self.user_input = tk.Entry(textvariable = name_input)
         self.user_input.pack()
+
         self.button_quit =tk.Button(self, text="Exit program", command=master.destroy)
         self.button_quit.pack()
+        
         self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
         self.help_btn.pack()#grid(row = 8, column = 9)#pack(side = RIGHT)
 
-
+        self.submit_btn =tk.Button(self, text="Submut", font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.botSearch)
+        self.submit_btn.pack()
 
     def bothelp():
         messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
