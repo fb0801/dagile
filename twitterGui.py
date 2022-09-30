@@ -10,6 +10,7 @@ import requests
 import json
 import os
 import random
+import time
 
 options ={}
 
@@ -32,27 +33,34 @@ class TwitterBot:
         
         
 
-        self.submit_btn =tk.Button(self, text="Submit", command = TwitterBot.botSearch)
+        self.submit_btn =tk.Button(self, text="Submit", command = self.botSearch)
         self.submit_btn.pack()
 
     def bothelp():
         messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
 
     def botSearch(self):
-        pass
+        dur = name_input.get()
+        if isinstance(dur, int):
+            print (dur)
+        else:
+            print("Error")
+        
+        #while dur:
+        #    mins, secs = divmod(dur, 60)
+        #    timer = '{:02d}:{:02d}'.format(mins, secs)
+        #    print(timer, end="\r")
+        #    time.sleep(1)
+        #    dur -= 1
+        #print('Fire in the hole!!')
 
 
 
 
 root = tk.Tk()
-name_input = StringVar()
+name_input = IntVar()
 
 
 Terry = TwitterBot(root)
 root.geometry("300x300")
 root.mainloop()
-
-
-#if __name__ == "__main__":
-    #takes user to the main menu using magic method/dunders
-    #main()
