@@ -29,9 +29,9 @@ class TwitterBot:
         self.button_quit.pack()
         
         self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
-        self.help_btn.pack()#grid(row = 8, column = 9)#pack(side = RIGHT)
+        self.help_btn.grid(row = 8, column = 9)#pack(side = RIGHT)
 
-        self.submit_btn =tk.Button(self, text="Submut", font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.botSearch)
+        self.submit_btn =tk.Button(self, text="Submut", command = TwitterBot.botSearch)
         self.submit_btn.pack()
 
     def bothelp():
@@ -48,6 +48,7 @@ name_input = StringVar()
 
 
 Terry = TwitterBot(root)
+root.geometry("300x300")
 root.mainloop()
 
 
