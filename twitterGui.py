@@ -12,7 +12,12 @@ import os
 import random
 import time
 
-options ={}
+OPTIONS = [
+"Jan",
+"Feb",
+"Mar"
+] 
+
 
 
 class TwitterBot:
@@ -28,23 +33,41 @@ class TwitterBot:
         self.user_input = tk.Entry(textvariable = name_input)
         self.user_input.pack()
 
+        variable = StringVar(master)
+        variable.set(OPTIONS[0]) # default value
+
+        w = OptionMenu(master, variable, *OPTIONS)
+        w.pack()
+
         self.button_quit =tk.Button(self, text="Exit", command=master.destroy)
         self.button_quit.pack()
         
         
 
-        self.submit_btn =tk.Button(self, text="Submit", command = self.botSearch)
+        self.submit_btn =tk.Button(self, text="Submit", command = TwitterBot.botSearch)
         self.submit_btn.pack()
 
     def bothelp():
         messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
 
-    def botSearch(self):
+    def botSearch():
         dur = name_input.get()
-        if isinstance(dur, int):
+        measure = Variable.get()
+        if isinstance(dur, int) == True:
             print (dur)
-        else:
+            print(measure)
+            
+            while dur:
+                mins, secs = divmod(dur, 60)
+                timer = '{:02d}:{:02d}'.format(mins, secs)
+                print(timer, end="\r")
+                time.sleep(1)
+                dur -= 1
+            print('Fire in the hole!!')
+        elif isinstance(dur, int) == False:
             print("Error")
+        else: 
+            print("Unknown")
         
         #while dur:
         #    mins, secs = divmod(dur, 60)
