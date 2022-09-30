@@ -21,17 +21,18 @@ class TwitterBot:
         
         master.title('Twitter Bot')
         
+        self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
+        self.help_btn.pack(side = RIGHT )#grid(row = 1, column = 9)
 
         self.user_input = tk.Entry(textvariable = name_input)
         self.user_input.pack()
 
-        self.button_quit =tk.Button(self, text="Exit program", command=master.destroy)
+        self.button_quit =tk.Button(self, text="Exit", command=master.destroy)
         self.button_quit.pack()
         
-        self.help_btn = tk.Button(self, text = '?',font = 'Times 20 ',width = 1, height = 1, command = TwitterBot.bothelp)
-        self.help_btn.pack(side = RIGHT )#grid(row = 1, column = 9)#pack(side = RIGHT)
+        
 
-        self.submit_btn =tk.Button(self, text="Submut", command = TwitterBot.botSearch)
+        self.submit_btn =tk.Button(self, text="Submit", command = TwitterBot.botSearch)
         self.submit_btn.pack()
 
     def bothelp():
