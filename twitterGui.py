@@ -18,7 +18,18 @@ OPTIONS = [
 "Mar"
 ] 
 
-
+monthchoosen = (' January', 
+                          ' February',
+                          ' March',
+                          ' April',
+                          ' May',
+                          ' June',
+                          ' July',
+                          ' August',
+                          ' September',
+                          ' October',
+                          ' November',
+                          ' December')
 
 class TwitterBot:
     def __init__(self, master):
@@ -34,10 +45,11 @@ class TwitterBot:
         self.user_input.pack()
 
         
-        variable.set(OPTIONS[0]) # default value
+        #variable.set(OPTIONS[0]) # default value
 
-        self.w = OptionMenu(self, variable, *OPTIONS)
-        self.w.pack()
+        #self.w = OptionMenu(self, variable, *OPTIONS)
+        #self.w.pack()
+        self.select = tk.Combobox(self, textvariable=variable, values =monthchoosen)
 
         self.button_quit =tk.Button(self, text="Exit", command=master.destroy)
         self.button_quit.pack()
@@ -50,12 +62,13 @@ class TwitterBot:
     def bothelp():
         messagebox.showinfo("Help", "Enter the duration") # if the user clicks on help this messagebox will appear 
 
-    def botSearch():
+    def botSearch(self):
         dur = name_input.get()
-        measure = Variable.get()
+        #measure = self.Variable.get()
+        current_value = variable.get()
         if isinstance(dur, int) == True:
             print (dur)
-            print(measure)
+            print(variable)
 
             while dur:
                 mins, secs = divmod(dur, 60)
