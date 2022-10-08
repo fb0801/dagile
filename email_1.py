@@ -5,10 +5,10 @@ from datetime import date
 import pandas as pd
 
 
-work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
-#work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
-#    'START DATE', 'Org.', 'Gender', 'END DATE','stu_status','Exit questionnaire sent','Exit questionnarie received', 
-#    'Folllow up Progression in work'])
+#work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
+work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
+    'START DATE', 'Org.', 'Gender', 'END DATE','stu_status','Exit questionnaire sent','Exit questionnarie received', 
+    'Folllow up Progression in work'])
 
 
 def getMonth():
@@ -41,9 +41,12 @@ def exit_quest():
     #exit questionnaire   
 
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    print(futs)
-    futs.to_csv('file_name.csv')    
+   
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'])] #& (work['Exit questionnarie received'].isnull())]
+    isempty =futs.empty
+    if futs[work.loc['Exit questionnarie received']== isempty]:
+        print(futs)
+        futs.to_csv('file_name.csv')    
     
     
     today = date.today() #gets todays date
