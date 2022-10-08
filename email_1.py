@@ -17,12 +17,16 @@ def main():
     '''usecols=['ID', 'First Name', 'Last Name', 'Email Address', 
     'START DATE', 'Org.', 'Gender', 'END DATE','Completer/Early Leaver', 'Folllow up Progression in work '])'''
     
-    work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
+    work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
+    '''usecols=['ID', 'First Name', 'Email Address', 
     'START DATE', 'Org.', 'Gender', 'END DATE', 'Exit questionnaire sent','Exit questionnarie received', 
-    'Folllow up Progression in work'])
-    print(work)
+    'Folllow up Progression in work'])'''
+    #print(work)
 
-    #work[''].where(work[''] =="")
+    #print(work.loc[work['stu_status',"Exit questionnarie received"])
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]
+    print(futs)
+    
         
 
 
