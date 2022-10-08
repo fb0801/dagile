@@ -41,12 +41,10 @@ def exit_quest():
     #exit questionnaire   
 
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
-   
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'])] #& (work['Exit questionnarie received'].isnull())]
-    isempty =futs.empty
-    if futs[work.loc['Exit questionnarie received']== isempty]:
-        print(futs)
-        futs.to_csv('file_name.csv')    
+    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]#.isnull())]
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
+    print(futs)
+    futs.to_csv('file_name.csv')    
     
     
     today = date.today() #gets todays date
