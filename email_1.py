@@ -19,7 +19,7 @@ def main():
     
     work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
     'START DATE', 'Org.', 'Gender', 'END DATE', 'Exit questionnaire sent','Exit questionnarie received', 
-    'Folllow up Progression in work '])
+    'Folllow up Progression in work'])
     print(work)
 
     #work[''].where(work[''] =="")
