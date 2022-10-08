@@ -3,6 +3,9 @@ from calendar import month
 from datetime import datetime
 import pandas as pd
 
+
+work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
+
 def getMonth():
     #function to get current month
     global month1
@@ -13,20 +16,19 @@ def getMonth():
 
 
 def main():
-    getMonth()
-    '''usecols=['ID', 'First Name', 'Last Name', 'Email Address', 
-    'START DATE', 'Org.', 'Gender', 'END DATE','Completer/Early Leaver', 'Folllow up Progression in work '])'''
-    
-    work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
-    '''usecols=['ID', 'First Name', 'Email Address', 
-    'START DATE', 'Org.', 'Gender', 'END DATE', 'Exit questionnaire sent','Exit questionnarie received', 
-    'Folllow up Progression in work'])'''
-    #print(work)
+    while True:
+        studentoption = int(input("Select a option:\n\n1.Exit Questionnaire to send\n2.Work Progression\n3.Quit\n'"))
+        
+        if studentoption ==1:
+            exit_quest()
+        elif studentoption == 2:
+            work_pro()
+        elif studentoption == 3:
+            quit()
+        else:
+            print("Sorry do not understand\n")
+            main()
 
-    #print(work.loc[work['stu_status',"Exit questionnarie received"])
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]
-    print(futs)
-    
         
 
 
@@ -38,13 +40,24 @@ def SendEmail():
     pass
 
 def exit_quest():
-    #exit questionnaire
-    pass
+    #exit questionnaire   
 
+    #print(work.loc[work['stu_status',"Exit questionnarie received"])
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
+    print(futs)    
+    
+    
+    date_object = datetime.date.today()
+    print(date_object)
 
 def work_pro():
     #work progress
-    pass
+    getMonth()
+
+
+    futsfwp= work.loc[(work["stu_status"]=="Completer")  (work["Gender"]=="male") & (work['Folllow up Progression in work']==month1)]
+    
+    fusfwp= work.loc[(work["stu_status"]=="Completer")  (work["Gender"]=="female") & (work['Folllow up Progression in work']==month1)]
 
 
 if __name__ == "__main__":
