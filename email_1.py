@@ -1,10 +1,12 @@
 #modules to use for application
 from calendar import month
 from datetime import datetime
+from datetime import date
 import pandas as pd
 
 
 work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
+
 
 def getMonth():
     #function to get current month
@@ -16,23 +18,16 @@ def getMonth():
 
 
 def main():
-    while True:
-        studentoption = int(input("Select a option:\n\n1.Exit Questionnaire to send\n2.Work Progression\n3.Quit\n'"))
-        
-        if studentoption ==1:
-            exit_quest()
-        elif studentoption == 2:
-            work_pro()
-        elif studentoption == 3:
-            quit()
-        else:
-            print("Sorry do not understand\n")
-            main()
-
-        
-
-
-
+    studentoption = int(input("Select a option:\n\n1.Exit Questionnaire to send\n2.Work Progression\n3.Quit\n'"))
+    if studentoption ==1:
+        exit_quest()
+    elif studentoption == 2:
+        work_pro()
+    elif studentoption == 3:
+        quit()
+    else:
+        print("Sorry do not understand\n")
+        main()
 
 
 def SendEmail():
@@ -47,8 +42,8 @@ def exit_quest():
     print(futs)    
     
     
-    date_object = datetime.date.today()
-    print(date_object)
+    today = date.today()
+    print(today)
 
 def work_pro():
     #work progress
