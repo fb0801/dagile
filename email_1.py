@@ -6,6 +6,9 @@ import pandas as pd
 
 
 work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
+#work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
+#    'START DATE', 'Org.', 'Gender', 'END DATE','stu_status','Exit questionnaire sent','Exit questionnarie received', 
+#    'Folllow up Progression in work'])
 
 
 def getMonth():
@@ -39,20 +42,33 @@ def exit_quest():
 
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
     futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    print(futs)    
+    print(futs)
+    futs.to_csv('file_name.csv')    
     
     
-    today = date.today()
-    print(today)
+    today = date.today() #gets todays date
+    #print(today)
 
 def work_pro():
     #work progress
     getMonth()
 
+    studoption = int(input("Select a option:\n\n1.Work Progression men\n2.Work Progression female\n3.Exit Questionnaire\n4.Quit'\n"))
 
-    futsfwp= work.loc[(work["stu_status"]=="Completer")  (work["Gender"]=="male") & (work['Folllow up Progression in work']==month1)]
-    
-    fusfwp= work.loc[(work["stu_status"]=="Completer")  (work["Gender"]=="female") & (work['Folllow up Progression in work']==month1)]
+    if studoption ==1:
+        futsfwp= work.loc[(work["stu_status"]=="Completer") & (work["Gender"]=="male") & (work['Folllow up Progression in work']==month1)]
+        print (futsfwp)
+
+    elif studoption == 2:
+        fusfwp= work.loc[(work["stu_status"]=="Completer") & (work["Gender"]=="female") & (work['Folllow up Progression in work']=="due in september")]
+        print(fusfwp)
+    elif studoption == 3:
+        exit_quest()
+    elif studoption == 4:
+        quit()
+    else:
+        print("Sorry do not understand\n")
+        work_pro()
 
 
 if __name__ == "__main__":
