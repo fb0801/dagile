@@ -8,6 +8,7 @@
 <li>https://www.itsolutionstuff.com/post/how-to-get-current-month-in-pythonexample.html</li>
 <li>https://towardsdatascience.com/how-to-export-pandas-dataframe-to-csv-2038e43d9c03</li>
 <li>https://www.digitalocean.com/community/tutorials/pandas-read_excel-reading-excel-file-in-python</li>
+<li>https://towardsdatascience.com/select-data-in-python-pandas-easily-with-loc-iloc-c6e8bc979e3e</li>
 <li>https://stackoverflow.com/questions/21285380/find-column-whose-name-contains-a-specific-string</li>
 <li>https://pandas.pydata.org/docs/user_guide/index.html#user-guide</li>
 <li>https://www.w3schools.com/python/matplotlib_getting_started.asp</li>
