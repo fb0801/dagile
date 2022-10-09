@@ -1,8 +1,10 @@
 #modules to use for application
 from calendar import month
+from cmath import nan
 from datetime import datetime
 from datetime import date
 import pandas as pd
+import numpy as np
 
 
 #work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
@@ -42,9 +44,17 @@ def exit_quest():
 
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]#.isnull())]
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    print(futs)
-    futs.to_csv('file_name.csv')    
+    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
+    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="NaN")]
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received'].isnull())]
+
+    for futs in "Exit questionnarie received":
+        if np.isnan(futs):
+            print(futs)
+            futs.to_csv('file_name.csv')
+
+    #print(futs)
+    #futs.to_csv('file_name.csv')    
     
     
     today = date.today() #gets todays date
