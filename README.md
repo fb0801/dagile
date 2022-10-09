@@ -2,6 +2,10 @@
 
 <h3>Description</h3>
 
+<h3>Changes made:</h3>
+<ul>
+<li>Renamed email file to stop script conflict</li>
+</ul>
 
 <h3>Resources used:</h3>
 <ul>
@@ -25,10 +29,4 @@
 <li>https://stackoverflow.com/questions/32171005/how-to-get-an-integer-from-a-tkinter-entry-box</li>
 <li>https://www.easytweaks.com/select-rows-nan-null-pandas/</li>
 
-</ul>
-
-
-<h3>Changes made:</h3>
-<ul>
-<li>Renamed email file to stop script conflict</li>
 </ul>
