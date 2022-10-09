@@ -41,20 +41,18 @@ def SendEmail():
 
 def exit_quest():
     #exit questionnaire   
-
+    blank = 1
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]#.isnull())]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="NaN")]
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received'].isnull())]
+    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']== blank)]
+    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received'].isnull())]
+    #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received']=="NaN")]
 
-    for futs in "Exit questionnarie received":
-        if np.isnan(futs):
-            print(futs)
-            futs.to_csv('file_name.csv')
 
-    #print(futs)
-    #futs.to_csv('file_name.csv')    
+    print(futs)
+    futs.to_csv('file_name.csv')    
+    
     
     
     today = date.today() #gets todays date
