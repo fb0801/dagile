@@ -28,5 +28,7 @@
 <li>https://www.activestate.com/resources/quick-reads/how-to-position-widgets-in-tkinter/#:~:text=place()%20places%20widgets%20in,row%20and%20column%20absolute%20coordinates.</li>
 <li>https://stackoverflow.com/questions/32171005/how-to-get-an-integer-from-a-tkinter-entry-box</li>
 <li>https://www.easytweaks.com/select-rows-nan-null-pandas/</li>
+<li>https://realpython.com/python-send-email/</li>
+<li>https://stackoverflow.com/questions/1278749/how-do-i-detect-missing-fields-in-a-csv-file-in-a-pythonic-way</li>
 
 </ul>
