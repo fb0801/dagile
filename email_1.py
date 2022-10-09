@@ -9,8 +9,8 @@ import numpy as np
 
 #work = pd.read_excel("STUDENTS_spreadsheet.xlsx") 
 work = pd.read_excel("STUDENTS_spreadsheet.xlsx", usecols=['ID', 'First Name', 'Email Address', 
-    'START DATE', 'Org.', 'Gender', 'END DATE','stu_status','Exit questionnaire sent','Exit questionnarie received', 
-    'Folllow up Progression in work'])
+     'START DATE', 'Org.', 'Gender', 'END DATE','stu_status','Exit questionnaire sent','ExitQuestReceived', 
+     'Folllow up Progression in work'])
 
 
 def getMonth():
@@ -41,11 +41,10 @@ def SendEmail():
 
 def exit_quest():
     #exit questionnaire   
-    blank = 1
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]#.isnull())]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']== blank)]
+    futs= work.loc[((work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")) & (work['ExitQuestReceived'] == 0)]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received'].isnull())]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received']=="NaN")]
 
