@@ -44,7 +44,7 @@ def exit_quest():
     #print(work.loc[work['stu_status',"Exit questionnarie received"])
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received']=="")]#.isnull())]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver") & (work['Exit questionnarie received'].isnull())]
-    futs= work.loc[((work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")) & (work['ExitQuestReceived'] == 0)]
+    futs= work.loc[((work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")) & ((work['ExitQuestReceived'] == 0) | (work['ExitQuestReceived'] == None))]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received'].isnull())]
     #futs= work.loc[(work["stu_status"]=="Completer") | (work["stu_status"]=="early Leaver")] #& (work['Exit questionnarie received']=="NaN")]
 
