@@ -14,13 +14,22 @@ def search():
 
     #link we want to use
     url = f"https://find-and-update.company-information.service.gov.uk/search?q={search_term}"
-    page = requests.get(url).text
-    doc= BeautifulSoup(page, 'html.parser')
+    findings = requests.get(url).text
+    doc= BeautifulSoup(findings, 'html.parser')
 
-    page_text = doc.find(class_="type-company")#results-list
-    items_found[page_text]
-    for items in items_found:
-        print(items)
+    #page_text = doc.find(class_="type-company")#results-list
+    div = doc.find(class_="results-list")
+    companies = div.find_all(list=re.compile(search_term))
+    
+    #for com in companies:
+        #res = doc.find_all('type-company', limit=5)
+    #    print (com)
+
+    #items_found[items]
+    #for companies in items_found:
+    print(div)
+    #for companies in page_text:
+        #print(companies)
 
 def searchResults():
     pass
