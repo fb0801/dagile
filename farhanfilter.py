@@ -15,11 +15,14 @@ work = pd.read_excel("STUDENTS_test.xlsx")
 
 def main():
     newfile = work.drop(columns=['Progress','Last log in Dagile UK'])
-    work['Last Name'] = work['Last Name'].str.replace('"', '')
-    work['Last Name'] = work['Last Name'].str.replace('"', '')
-
+    #work['Last Name'] = work['Last Name'].str.replace(" " ", "")
+    #work['Last Name'] = work['Last Name'].str.replace('"', '')
+    #work.replace('"', '')
     #work['Last Name'] = work['Last Name'].strip("'")
 
+    #work.apply(lambda x:x.str.replace('"', ""))
+    rep= work.loc[:,"Last Name"]
+    rep.replace('"','', regex=True)
     #newfile.loc[work['Last Name'].isin(['Last Name'])] = ''
     name = input("Enter name of file: ")
     newfile.to_csv(f'{name}.csv') 
