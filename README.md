@@ -10,6 +10,7 @@
 <h3>Resources used:</h3>
 <ul>
 <https://automatetheboringstuff.com/</li>
+<li>https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html</li>
 <li>https://www.itsolutionstuff.com/post/how-to-get-current-month-in-pythonexample.html</li>
 <li>https://towardsdatascience.com/how-to-export-pandas-dataframe-to-csv-2038e43d9c03</li>
 <li>https://www.digitalocean.com/community/tutorials/pandas-read_excel-reading-excel-file-in-python</li>
