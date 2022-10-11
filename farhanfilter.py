@@ -15,7 +15,9 @@ work = pd.read_excel("STUDENTS_test.xlsx")
 
 def main():
     newfile = work.drop(columns=['Progress','Last log in Dagile UK'])
-    work['Last Name'] = work['Last Name'].str.replace("''", "")
+    work['Last Name'] = work['Last Name'].str.replace('"', '')
+    work['Last Name'] = work['Last Name'].str.replace('"', '')
+
     #work['Last Name'] = work['Last Name'].strip("'")
 
     #newfile.loc[work['Last Name'].isin(['Last Name'])] = ''
