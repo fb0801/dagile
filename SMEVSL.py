@@ -18,16 +18,18 @@ def search():
     doc= BeautifulSoup(findings, 'html.parser')
 
     #page_text = doc.find(class_="type-company")#results-list
-    div = doc.find(class_="results-list")
+    div = doc.find(class_="results-list type-company")
     companies = div.find_all(list=re.compile(search_term))
     
+    for results in companies:
+        
     #for com in companies:
         #res = doc.find_all('type-company', limit=5)
     #    print (com)
 
     #items_found[items]
     #for companies in items_found:
-    print(div)
+    #print(div)
     #for companies in page_text:
         #print(companies)
 
