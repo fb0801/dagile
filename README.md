@@ -2,6 +2,8 @@
 
 <h3>Description</h3>
 
+<h3>Requirements: </h3>
+
 <h3>Changes made:</h3>
 <ul>
 <li>Renamed email file to stop script conflict</li>
@@ -32,5 +34,6 @@
 <li>https://www.easytweaks.com/select-rows-nan-null-pandas/</li>
 <li>https://realpython.com/python-send-email/</li>
 <li>https://stackoverflow.com/questions/1278749/how-do-i-detect-missing-fields-in-a-csv-file-in-a-pythonic-way</li>
+<li>https://www.geeksforgeeks.org/how-to-get-column-names-in-pandas-dataframe/</li>
 
 </ul>
