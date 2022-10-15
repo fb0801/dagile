@@ -1,4 +1,9 @@
-'''cmd version of twitter bot'''
+'''cmd version of twitter bot
+	
+part of https://github.com/fb0801/dagile created by Farhan
+
+
+'''
 
 #modules for application
 import time
@@ -31,7 +36,17 @@ def start():
 def twitter():
 	url ="https://twitter.com/home?lang=en"
 	
+def login():
+	pass
 
+def retweet():
+	pass
+
+def twitterFollow():
+	pass
+
+def TweetLike():
+	pass
 
 def files():
 	pass
