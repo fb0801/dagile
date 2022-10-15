@@ -11,7 +11,10 @@
 
 <h3>Resources used:</h3>
 <ul>
-<https://automatetheboringstuff.com/</li>
+<li><https://automatetheboringstuff.com/</li>
+<li>https://docs.tweepy.org/en/stable/</li>
+<li>https://www.pexels.com/search/learning/</li>
+<li>https://pythonhow.com/python-tutorial/pandas/Accessing-pandas-dataframe-columns-rows-and-cells/</li>
 <li>https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html</li>
 <li>https://www.itsolutionstuff.com/post/how-to-get-current-month-in-pythonexample.html</li>
 <li>https://towardsdatascience.com/how-to-export-pandas-dataframe-to-csv-2038e43d9c03</li>
