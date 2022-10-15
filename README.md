@@ -12,6 +12,15 @@
 <h3>Resources used:</h3>
 <ul>
 <li><https://automatetheboringstuff.com/</li>
+<li>https://www.geeksforgeeks.org/pandas-remove-special-characters-from-column-names/</li>
+<li>https://www.statology.org/pandas-remove-special-characters/</li>
+<li>https://stackoverflow.com/questions/59336526/how-to-remove-in-pandas-dataframe</li>
+<li>https://www.geeksforgeeks.org/delete-a-csv-column-in-python/</li>
+<li>https://www.digitalocean.com/community/tutorials/python-remove-character-from-string</li>
+<li>https://stackoverflow.com/questions/51359010/pandas-data-with-double-quoteM/li>
+<li>https://www.adamsmith.haus/python/answers/how-to-remove-quotes-from-a-string-in-python#:~:text=Use%20str.&text=Call%20str.,the%20ends%20of%20the%20string.</li>
+<li>https://stackoverflow.com/questions/27060098/replacing-few-values-in-a-pandas-dataframe-column-with-another-value</li>
+<li>https://www.digitalocean.com/community/tutorials/python-trim-string-rstrip-lstrip-strip</li>
 <li>https://docs.tweepy.org/en/stable/</li>
 <li>https://www.pexels.com/search/learning/</li>
 <li>https://pythonhow.com/python-tutorial/pandas/Accessing-pandas-dataframe-columns-rows-and-cells/</li>
