@@ -11,7 +11,7 @@ import numpy as np
 rmv =['A','B','T','U']
 rmvList =["[',']','"','"',"]
 
-#work = pd.read_excel("STUDENTS_test.xlsx")
+work = pd.read_excel("STUDENTS_test.xlsx")
 
 
 
@@ -54,7 +54,9 @@ def main_2():
     #work['groups'] = work['groups'].map(lambda x: x.lstrip('["').rstrip('"]'))
     #newfile['groups'] =newfile['groups'].str.replace(, '')
     ###newfile['groups'] = newfile['groups'].str.replace('\W', '', regex=True)
-    
+    newfile['groups'] =newfile['groups'].str.replace('[', '')
+    newfile['groups'] =newfile['groups'].str.replace(']', '')
+    newfile['groups'] =newfile['groups'].str.replace('"', '')
     #work.replace('"', '')
     #print(rep)
     #rep.replace('"','', regex=True)
