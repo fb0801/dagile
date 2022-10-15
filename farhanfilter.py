@@ -9,8 +9,10 @@ import pandas as pd
 import numpy as np
 
 rmv =['A','B','T','U']
+rmvList =["[',']','"','"',"]
 
 #work = pd.read_excel("STUDENTS_test.xlsx")
+
 
 
 
@@ -36,18 +38,33 @@ search for [ , leave the ‘replace with’ field blank then select ‘replace a
 '''
 
 def main_2():
-    #data_top = work.head()  
+    #data_top = work.head() #print column titles 
     #print(data_top) 
-    #newfile = work.drop(columns=['A','B','T','U'] axis=1)
-    newfile = work.drop(columns=['User Status', 'Tutor','password','groups'])
+    #newfile = work.drop(columns=['A','B','T','U'] axis=1)#drop column
+    newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
     #newfile = work.drop(['A','B','T','U'], axis=1)
     ##newfile = work.pop(rmv)  
-     #rep= work.loc[:,"groups"]
-     #rep.replace('"','', regex=True)
+    #rep= work.loc[:,"groups"]
+    ##work['groups'] = work['groups'].str.replace("['", )
+    ##work['groups'] = work['groups'].str.replace("']", )
+    
+    
+    #work["groups"].str.replace("[]","")
 
-    ##name = input("Enter name of file: ")
-    ##newfile.to_csv(f'{name}.csv') 
-    ##print("task completed")
+    #work['groups'] = work['groups'].map(lambda x: x.lstrip('["').rstrip('"]'))
+    #newfile['groups'] =newfile['groups'].str.replace(, '')
+    ###newfile['groups'] = newfile['groups'].str.replace('\W', '', regex=True)
+    
+    #work.replace('"', '')
+    #print(rep)
+    #rep.replace('"','', regex=True)
+
+   
+    name = input("Enter name of file: ")
+    #newfile =work.drop(columns=['A']) 
+    dagile = newfile.to_csv(f'{name}.csv')
+   
+    print("task completed")
 
 
 
