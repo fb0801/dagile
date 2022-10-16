@@ -11,7 +11,11 @@ import requests
 import json
 import os
 
-items_found = {}
+items_found = {
+    "Company Name":"",
+    "Company Status":"",
+    "Company details":""
+}
 
 def search():
     search_term = input('Enter the company name: ') # input from user
@@ -22,22 +26,31 @@ def search():
     doc= BeautifulSoup(findings, 'html.parser')
 
     #page_text = doc.find(class_="type-company")#results-list
-    div = doc.find(class_="results-list type-company")
-   
+    soup = doc.find(class_="results-list")
+    #companies = div.find_all(text=re.compile(search_term))
+    companies = soup.find_all(class_="type-company")
+
+    article = doc.article
+    trs = article.contents
     
+
     for results in companies:
-         companies = div.find(list=re.compile(search_term))
         
-    #for com in companies:
+        fixed_name = companies.a.string
+        comp_status =  companies.p.string
+        comp_descrip = companies.p.string    
+    
+       
+    print(fixed_name, comp_status,comp_descrip)
+    #for results in companies:
+    #    title = soup.find_all(class_="type-company")
+        
+    
         #res = doc.find_all('type-company', limit=5)
     #    print (com)
 
-    #items_found[items]
-    #for companies in items_found:
-     print(companies)
-    #for companies in page_text:
-        #print(companies)
-
+     
+   
 def searchResults():
     pass
 
