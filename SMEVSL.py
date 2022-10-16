@@ -1,4 +1,8 @@
-'''Gather company data more quickly'''
+'''Gather company data more quickly
+part of https://github.com/fb0801/dagile created by Farhan Bhatti
+
+GNU General Public License v2.0
+'''
 
 #modules for application use
 import re
@@ -10,7 +14,7 @@ import os
 items_found = {}
 
 def search():
-    search_term = input('what would you like to search  for? ') # input from user
+    search_term = input('Enter the company name: ') # input from user
 
     #link we want to use
     url = f"https://find-and-update.company-information.service.gov.uk/search?q={search_term}"
@@ -19,9 +23,10 @@ def search():
 
     #page_text = doc.find(class_="type-company")#results-list
     div = doc.find(class_="results-list type-company")
-    companies = div.find_all(list=re.compile(search_term))
+   
     
     for results in companies:
+         companies = div.find(list=re.compile(search_term))
         
     #for com in companies:
         #res = doc.find_all('type-company', limit=5)
@@ -29,7 +34,7 @@ def search():
 
     #items_found[items]
     #for companies in items_found:
-    #print(div)
+     print(companies)
     #for companies in page_text:
         #print(companies)
 
