@@ -12,6 +12,7 @@
 <h3>Resources used:</h3>
 <ul>
 <li><https://automatetheboringstuff.com/</li>
+<li>https://github.com/fb0801/python_selenium</li>
 <li>https://www.geeksforgeeks.org/pandas-remove-special-characters-from-column-names/</li>
 <li>https://www.statology.org/pandas-remove-special-characters/</li>
 <li>https://stackoverflow.com/questions/59336526/how-to-remove-in-pandas-dataframe</li>
