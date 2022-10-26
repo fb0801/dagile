@@ -12,6 +12,8 @@
 <h3>Resources used:</h3>
 <ul>
 <li><https://automatetheboringstuff.com/</li>
+<li>https://pythonbasics.org/read-excel/#:~:text=To%20read%20an%20excel%20file,is%20a%20tabular%20like%20structure.</li>
+<li>https://stackoverflow.com/questions/45759966/counting-unique-values-in-a-column-in-pandas-dataframe-like-in-qlik</li>
 <li>https://github.com/fb0801/python_selenium</li>
 <li>https://www.geeksforgeeks.org/pandas-remove-special-characters-from-column-names/</li>
 <li>https://www.statology.org/pandas-remove-special-characters/</li>
