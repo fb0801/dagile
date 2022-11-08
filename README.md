@@ -14,6 +14,7 @@
 <li><https://automatetheboringstuff.com/</li>
 <li>https://pythonbasics.org/read-excel/#:~:text=To%20read%20an%20excel%20file,is%20a%20tabular%20like%20structure.</li>
 <li>https://stackoverflow.com/questions/45759966/counting-unique-values-in-a-column-in-pandas-dataframe-like-in-qlik</li>
+<li>https://pythonguides.com/convert-pdf-file-to-docx-in-python/</li>
 <li>https://github.com/fb0801/python_selenium</li>
 <li>https://www.geeksforgeeks.org/pandas-remove-special-characters-from-column-names/</li>
 <li>https://www.statology.org/pandas-remove-special-characters/</li>
@@ -25,6 +26,8 @@
 <li>https://stackoverflow.com/questions/27060098/replacing-few-values-in-a-pandas-dataframe-column-with-another-value</li>
 <li>https://www.digitalocean.com/community/tutorials/python-trim-string-rstrip-lstrip-strip</li>
 <li>https://docs.tweepy.org/en/stable/</li>
+  <li>https://stackoverflow.com/questions/26358281/python-convert-pdf-to-doc</li>
+  <li>https://dothinking.github.io/pdf2docx/installation.html</li>
 <li>https://www.pexels.com/search/learning/</li>
 <li>https://pythonhow.com/python-tutorial/pandas/Accessing-pandas-dataframe-columns-rows-and-cells/</li>
 <li>https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html</li>
