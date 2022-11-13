@@ -9,30 +9,14 @@ search for [ , replace all’. Repeat for ] and “:
 #application modules
 import pandas as pd
 import numpy as np
+import os
 
 rmv =['A','B','T','U']
 rmvList =["[',']','"','"',"]
 
-work = pd.read_excel("STUDENTS_test.xlsx")
+#work = pd.read_excel("STUDENTS_test.xlsx")
+work =pd.read_csv("Dagile Users.csv")
 
-
-
-
-def main():
-    ##newfile = work.drop(columns=['Progress','Last log in Dagile UK'])
-    #work['Last Name'] = work['Last Name'].str.replace(" " ", "")
-    #work['Last Name'] = work['Last Name'].str.replace('"', '')
-    #work.replace('"', '')
-    #work['Last Name'] = work['Last Name'].strip("'")
-
-    #work.apply(lambda x:x.str.replace('"', ""))
-    ##rep= work.loc[:,"Last Name"]
-    ##rep.replace('"','', regex=True)
-    #newfile.loc[work['Last Name'].isin(['Last Name'])] = ''
-    ##name = input("Enter name of file: ")
-    ##newfile.to_csv(f'{name}.csv') 
-    ##print("task completed")
-    pass
 
 
 def main_2():
@@ -56,6 +40,9 @@ def main_2():
     
     dagile = newfile.to_csv(f'{name}.csv')
    
+    newDagile = dagile
+    print(newDagile)
+
     print("task completed")
 
 
