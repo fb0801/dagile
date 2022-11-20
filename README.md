@@ -17,6 +17,10 @@
 <li>https://pythonguides.com/convert-pdf-file-to-docx-in-python/</li>
 <li>https://github.com/fb0801/python_selenium</li>
 <li>https://www.geeksforgeeks.org/pandas-remove-special-characters-from-column-names/</li>
+<li>https://stackoverflow.com/questions/72478573/how-to-send-an-email-using-python-after-googles-policy-update-on-not-allowing-j</li>
+<li>https://stackoverflow.com/questions/6270782/how-to-send-an-email-with-python</li>
+<li>https://docs.python.org/3/library/email.examples.html</li>
+<li>https://www.justintodata.com/send-email-using-python-tutorial/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6InllcyJ9</li>
 <li>https://www.statology.org/pandas-remove-special-characters/</li>
 <li>https://stackoverflow.com/questions/59336526/how-to-remove-in-pandas-dataframe</li>
 <li>https://www.geeksforgeeks.org/delete-a-csv-column-in-python/</li>
