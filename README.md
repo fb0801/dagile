@@ -61,5 +61,7 @@ Python 3
 <li>https://www.geeksforgeeks.org/how-to-get-column-names-in-pandas-dataframe/</li>
 <li>https://stackoverflow.com/questions/23901168/how-do-i-insert-a-jpeg-image-into-a-python-tkinter-window</li>
 <li>https://www.plus2net.com/python/tkinter-image-resize.php</li>
+  <li>https://pythonguides.com/python-tkinter-image/</li>
+  <li>https://realpython.com/python-gui-tkinter/#building-your-first-python-gui-application-with-tkinter</li>
 
 </ul>
