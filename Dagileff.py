@@ -13,10 +13,10 @@ import os
 import tkinter
 from tkinter.messagebox import showerror, showwarning, showinfo
 from PIL import Image, ImageTk
-
-
 from tkinter import *
 from tkinter import ttk
+
+
 root = Tk()
 root.title("Dagile Filter")
 root.geometry('510x300') 
@@ -28,6 +28,7 @@ img = ImageTk.PhotoImage(file="image/dagile.png")
 Label(root,image=img).pack()
 
 def dFilter():
+    #function to filter the file
     work =pd.read_csv("Dagile Users.csv")
     newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
     newfile['groups'] =newfile['groups'].str.replace('[', '')
@@ -40,6 +41,7 @@ def dFilter():
     entry.delete(0, END)
 
 
+#gui widgets
 label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit", command= dFilter)
