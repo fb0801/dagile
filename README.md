@@ -34,6 +34,7 @@ Python 3
   <li>https://stackoverflow.com/questions/26358281/python-convert-pdf-to-doc</li>
   <li>https://dothinking.github.io/pdf2docx/installation.html</li>
 <li>https://www.pexels.com/search/learning/</li>
+<li>https://stackoverflow.com/questions/47492548/image-label-not-showing-with-pil-python-3-6</li>
 <li>https://pythonhow.com/python-tutorial/pandas/Accessing-pandas-dataframe-columns-rows-and-cells/</li>
 <li>https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html</li>
 <li>https://www.itsolutionstuff.com/post/how-to-get-current-month-in-pythonexample.html</li>
@@ -58,5 +59,7 @@ Python 3
 <li>https://realpython.com/python-send-email/</li>
 <li>https://stackoverflow.com/questions/1278749/how-do-i-detect-missing-fields-in-a-csv-file-in-a-pythonic-way</li>
 <li>https://www.geeksforgeeks.org/how-to-get-column-names-in-pandas-dataframe/</li>
+<li>https://stackoverflow.com/questions/23901168/how-do-i-insert-a-jpeg-image-into-a-python-tkinter-window</li>
+<li>https://www.plus2net.com/python/tkinter-image-resize.php</li>
 
 </ul>
