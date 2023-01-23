@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import os
 import tkinter
+import tkMessageBox
 from PIL import Image, ImageTk
 
 
@@ -26,14 +27,26 @@ canvas = tkinter.Canvas(root, width = 100, height = 100)
 img = ImageTk.PhotoImage(file="image/dagile.png") 
 Label(root,image=img).pack()
 
+def dFilter():
+    work =pd.read_csv("Dagile Users.csv")
+    newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
+    newfile['groups'] =newfile['groups'].str.replace('[', '')
+    newfile['groups'] =newfile['groups'].str.replace(']', '')
+    newfile['groups'] =newfile['groups'].str.replace('"', '')
+    name = entry.get()
+    nfn = name
+    dagile = newfile.to_csv(f'{name}.csv')
+    tkinter.messagebox.showinfo(title=None, message="Task completed")
+
 
 label = ttk.Label(text="File Name")
 entry = ttk.Entry()
-btn = ttk.Button(text="Submit")
+btn = ttk.Button(text="Submit", command= dFilter)
 label.pack()
 entry.pack()
 btn.pack()
 canvas.pack()
+
 
 
 
