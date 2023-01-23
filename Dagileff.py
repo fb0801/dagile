@@ -18,16 +18,16 @@ from tkinter import *
 from tkinter import ttk
 root = Tk()
 root.title("Dagile Filter")
-root.geometry('500x300') 
+root.geometry('510x300') 
 
-canvas = tkinter.Canvas(root, width = 150, height = 150)  
+canvas = tkinter.Canvas(root, width = 100, height = 100)  
 
 # loading the image
 img = ImageTk.PhotoImage(file="image/dagile.png") 
 Label(root,image=img).pack()
 
 
-label = ttk.Label(text="Name")
+label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit")
 label.pack()
