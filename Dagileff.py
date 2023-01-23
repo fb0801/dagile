@@ -18,9 +18,9 @@ from tkinter import *
 from tkinter import ttk
 root = Tk()
 root.title("Dagile Filter")
-root.geometry('400x400') 
+root.geometry('500x300') 
 
-canvas = tkinter.Canvas(root, width = 400, height = 300)  
+canvas = tkinter.Canvas(root, width = 150, height = 150)  
 
 # loading the image
 img = ImageTk.PhotoImage(file="image/dagile.png") 
