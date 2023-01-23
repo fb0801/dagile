@@ -11,7 +11,7 @@ import pandas as pd
 import numpy as np
 import os
 import tkinter
-import tkMessageBox
+from tkinter.messagebox import showerror, showwarning, showinfo
 from PIL import Image, ImageTk
 
 
@@ -37,6 +37,7 @@ def dFilter():
     nfn = name
     dagile = newfile.to_csv(f'{name}.csv')
     tkinter.messagebox.showinfo(title=None, message="Task completed")
+    entry.delete(0, END)
 
 
 label = ttk.Label(text="File Name")
