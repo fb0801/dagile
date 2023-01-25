@@ -51,13 +51,6 @@ label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit", command= dFilter)
 
-#root.bind('<Return>', dFilter)
-#if key == Key.enter:
-#if keyboard.is_pressed("return"):
-#input("Press Enter to continue...")
-#dFilter()
-
-
 
 label.pack()
 entry.pack()
