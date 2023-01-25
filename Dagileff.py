@@ -15,7 +15,8 @@ from tkinter.messagebox import showerror, showwarning, showinfo
 from PIL import Image, ImageTk
 from tkinter import *
 from tkinter import ttk
-
+from pynput.keyboard import Key, Listener
+#import keyboard
 
 root = Tk()
 root.title("Dagile Filter")
@@ -28,28 +29,40 @@ img = ImageTk.PhotoImage(file="image/dagile.png")
 Label(root,image=img).pack()
 
 def dFilter():
-    #function to filter the file
-    work =pd.read_csv("Dagile Users.csv")
-    newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
-    newfile['groups'] =newfile['groups'].str.replace('[', '')
-    newfile['groups'] =newfile['groups'].str.replace(']', '')
-    newfile['groups'] =newfile['groups'].str.replace('"', '')
     name = entry.get()
-    nfn = name
-    dagile = newfile.to_csv(f'{name}.csv')
-    tkinter.messagebox.showinfo(title=None, message="Task completed")
-    entry.delete(0, END)
+    if len(name) == 0:
+        tkinter.messagebox.showerror(title="Error", message="Error no name given")
+    else:
+        #function to filter the file
+        work =pd.read_csv("Dagile Users.csv")
+        newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
+        newfile['groups'] =newfile['groups'].str.replace('[', '')
+        newfile['groups'] =newfile['groups'].str.replace(']', '')
+        newfile['groups'] =newfile['groups'].str.replace('"', '')
+       
+        nfn = name
+        dagile = newfile.to_csv(f'{name}.csv')
+        tkinter.messagebox.showinfo(title="Success", message="Task completed")
+        entry.delete(0, END)
 
 
 #gui widgets
 label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit", command= dFilter)
+
+#root.bind('<Return>', dFilter)
+#if key == Key.enter:
+#if keyboard.is_pressed("return"):
+#input("Press Enter to continue...")
+#dFilter()
+
+
+
 label.pack()
 entry.pack()
 btn.pack()
 canvas.pack()
-
 
 
 
