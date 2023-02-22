@@ -1,6 +1,7 @@
 # dagile
 
 <h3>Description</h3>
+Components built for the <a href="https://www.dagilelondon.com/">Dagile</a> project
 
 <h3>Requirements: </h3>
 Python 3
