@@ -46,10 +46,13 @@ def dFilter():
         entry.delete(0, END)
 
 
+
+
 #gui widgets
 label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit", command= dFilter)
+entry.bind('<Return>',dFilter)
 
 
 label.pack()
