@@ -65,5 +65,6 @@ Python 3
   <li>https://pythonguides.com/python-tkinter-image/</li>
   <li>https://realpython.com/python-gui-tkinter/#building-your-first-python-gui-application-with-tkinter</li>
   <li>https://stackoverflow.com/questions/2260235/how-to-clear-the-entry-widget-after-a-button-is-pressed-in-tkinter</li>
+  <li>https://stackoverflow.com/questions/32289175/list-of-all-tkinter-events</li>
 
 </ul>
