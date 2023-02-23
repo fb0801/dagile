@@ -45,14 +45,29 @@ def dFilter():
         tkinter.messagebox.showinfo(title="Success", message="Task completed")
         entry.delete(0, END)
 
-
+def dFFilter(e):
+    name = entry.get()
+    if len(name) == 0:
+        tkinter.messagebox.showerror(title="Error", message="Error no name given")
+    else:
+        #function to filter the file
+        work =pd.read_csv("Dagile Users.csv")
+        newfile = work.drop(columns=['User Status', 'Tutor','Date imported','Notes'])
+        newfile['groups'] =newfile['groups'].str.replace('[', '')
+        newfile['groups'] =newfile['groups'].str.replace(']', '')
+        newfile['groups'] =newfile['groups'].str.replace('"', '')
+       
+        nfn = name
+        dagile = newfile.to_csv(f'{name}.csv')
+        tkinter.messagebox.showinfo(title="Success", message="Task completed")
+        entry.delete(0, END)
 
 
 #gui widgets
 label = ttk.Label(text="File Name")
 entry = ttk.Entry()
 btn = ttk.Button(text="Submit", command= dFilter)
-entry.bind('<Return>',dFilter)
+entry.bind('<Return>',dFFilter)
 
 
 label.pack()
