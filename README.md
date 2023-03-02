@@ -71,5 +71,6 @@ Python 3
   <li>https://stackoverflow.com/questions/73147456/can-i-automate-this-with-python-sending-emails-with-a-file-that-needs-to-be-upd</li>
   <li> https://www.makeuseof.com/send-outlook-emails-using-python/<//li>
   <li>https://medium.com/mlearning-ai/use-python-to-send-outlook-emails-d673ce9e33e4</li>
+ <li> https://automatetheboringstuff.com/2e/chapter18/</li>
 
 </ul>
