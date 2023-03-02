@@ -66,5 +66,10 @@ Python 3
   <li>https://realpython.com/python-gui-tkinter/#building-your-first-python-gui-application-with-tkinter</li>
   <li>https://stackoverflow.com/questions/2260235/how-to-clear-the-entry-widget-after-a-button-is-pressed-in-tkinter</li>
   <li>https://stackoverflow.com/questions/32289175/list-of-all-tkinter-events</li>
+  <li> https://stackoverflow.com/questions/6332577/send-outlook-email-via-python</li>
+  <li>https://www.codeforests.com/2020/06/05/how-to-send-email-from-outlook/</li>
+  <li>https://stackoverflow.com/questions/73147456/can-i-automate-this-with-python-sending-emails-with-a-file-that-needs-to-be-upd</li>
+  <li> https://www.makeuseof.com/send-outlook-emails-using-python/<//li>
+  <li>https://medium.com/mlearning-ai/use-python-to-send-outlook-emails-d673ce9e33e4</li>
 
 </ul>
