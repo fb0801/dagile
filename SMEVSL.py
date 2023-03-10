@@ -37,11 +37,12 @@ def search():
     for results in companies:
         
         fixed_name = results.h3.text
-        comp_status =  results['meta crumbtrail'].text
-        comp_descrip = results['p'].text
+        #comp_status =  results['meta crumbtrail'].text
+        comp_descrip = results.p.text
+        company_link = results.a.text
     
        
-    print(fixed_name, comp_status,comp_descrip)
+        print(f'Company Name: {fixed_name} /n Company Status:  /n Company details: {comp_descrip}, {company_link}')
     #for results in companies:
     #    title = soup.find_all(class_="type-company")
         
