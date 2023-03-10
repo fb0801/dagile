@@ -36,9 +36,9 @@ def search():
 
     for results in companies:
         
-        fixed_name = companies['h3']
-        comp_status =  companies['meta crumbtrail']
-        comp_descrip = companies['p']    
+        fixed_name = companies['h3'].text
+        comp_status =  companies['meta crumbtrail'].text
+        comp_descrip = companies['p'].text
     
        
     print(fixed_name, comp_status,comp_descrip)
