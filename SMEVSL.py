@@ -36,10 +36,10 @@ def search():
 
     for results in companies:
         
-        fixed_name = results.h3.text
+        fixed_name = results #.text.text #text
         #comp_status =  results['meta crumbtrail'].text
-        comp_descrip = results.p.text
-        company_link = results.a.text
+        comp_descrip = results #.p.text
+        company_link = results #.a.text #['govuk-link']
     
        
         print(f'Company Name: {fixed_name} /n Company Status:  /n Company details: {comp_descrip}, {company_link}')
