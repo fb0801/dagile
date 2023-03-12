@@ -72,5 +72,8 @@ Python 3
   <li> https://www.makeuseof.com/send-outlook-emails-using-python/<//li>
   <li>https://medium.com/mlearning-ai/use-python-to-send-outlook-emails-d673ce9e33e4</li>
  <li> https://automatetheboringstuff.com/2e/chapter18/</li>
+ p<li>https://medium.com/swlh/automate-sending-emails-with-python-using-a-spreadsheet-e9763b3c9559</li>
+<li> https://www.geeksforgeeks.org/python-send-email-to-a-list-of-emails-from-a-spreadsheet/</li>
+<li>https://realpython.com/python-send-email/</li>
 
 </ul>
