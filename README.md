@@ -6,6 +6,7 @@ Components built for the <a href="https://www.dagilelondon.com/">Dagile</a> proj
 <h3>Requirements: </h3>
 Python 3
 
+
 <h3>Changes made:</h3>
 <ul>
 <li>Renamed email file to stop script conflict</li>
@@ -14,7 +15,8 @@ Python 3
 <h3>Updates</h3>
 <ul>
 <li>Can send emails via Gmail with a csv file, can send emails via outlook but still under testing to use csv file</li>
-</li>can now click on the button or press enter on your keyboard to apply filter with DagileFF</li>
+<li>can now click on the button or press enter on your keyboard to apply filter with DagileFF</li>
+<li> can use SMEVSL program to webscape company house, format of results still under development and testing</li>
 </ul>
 
 <h3>Resources used:</h3>
