@@ -1,4 +1,4 @@
-# dagile
+# Dagile
 
 <h3>Description</h3>
 Components built for the <a href="https://www.dagilelondon.com/">Dagile</a> project
@@ -9,6 +9,12 @@ Python 3
 <h3>Changes made:</h3>
 <ul>
 <li>Renamed email file to stop script conflict</li>
+</ul>
+
+<h3>Updates</h3>
+<ul>
+<li>Can send emails via Gmail with a csv file, can send emails via outlook but still under testing to use csv file</li>
+</li>can now click on the button or press enter on your keyboard to apply filter with DagileFF</li>
 </ul>
 
 <h3>Resources used:</h3>
