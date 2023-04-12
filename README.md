@@ -83,5 +83,6 @@ Python 3
  p<li>https://medium.com/swlh/automate-sending-emails-with-python-using-a-spreadsheet-e9763b3c9559</li>
 <li> https://www.geeksforgeeks.org/python-send-email-to-a-list-of-emails-from-a-spreadsheet/</li>
 <li>https://realpython.com/python-send-email/</li>
+<li>https://likegeeks.com/python-send-emails/</li>
 
 </ul>
